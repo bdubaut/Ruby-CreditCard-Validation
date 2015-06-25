@@ -1,10 +1,17 @@
+require "string"
+
 module CreditCardValidator
   class CreditCard
     attr_accessor :number, :type
     def initialize n
-      self.number = n.to_s
-      self.type = 'Unknown'
-      self
+      number = n.gsub(' ', '')
+      if number.is_integer?
+        self.number = number
+        self.type = "Unknown"
+        self
+      else
+        raise StandardError, "Credit Card: \'#{n}\': Bad format."
+      end
     end
 
     # This method performs the validity check using the Luhn Algorithm.
