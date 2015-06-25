@@ -13,10 +13,10 @@ describe MasterCard, 'Visa Credit Card' do
       expect(c.number.length).to eq 16
       expect(c.type).to eq 'MasterCard'
     end
-    it 'raises a StandardError if the number is startomg with [51-55]' do
+    it 'raises a StandardError if the number is starting with [51-55]' do
       expect{MasterCard.new('43212323423324')}.to raise_error StandardError
     end
-    it 'raises a StandardError if the number is startomg with [51-55]' do
+    it 'raises a StandardError if the number is not 16 characters' do
       expect{MasterCard.new('510299878734987')}.to raise_error StandardError
     end
   end
