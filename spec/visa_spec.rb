@@ -1,4 +1,5 @@
 require "spec_helper"
+require "./lib/credit_card"
 require "./lib/visa.rb"
 
 include CreditCardValidator

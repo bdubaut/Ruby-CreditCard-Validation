@@ -1,4 +1,3 @@
-require 'credit_card'
 module CreditCardValidator
 
   class Amex < CreditCard
