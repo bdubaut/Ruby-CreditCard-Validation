@@ -18,8 +18,9 @@ describe CreditCardFactory, 'Factory method' do
     it 'instanciates an American Express card' do
       expect(CreditCardFactory.validate_credit_card('378282246310005').class).to eq Amex
     end
-    it 'returns the error if something goes wrong' do
-      expect(CreditCardFactory.validate_credit_card('toto').class).to eq StandardError
+    it 'prints the error to STDERR' do
+      expect{CreditCardFactory.validate_credit_card('toto')}.to output("Credit Card: 'toto': Bad format.\n").to_stderr
+      expect { CreditCardFactory.validate_credit_card('toto') }.not_to raise_error
     end
   end
 end

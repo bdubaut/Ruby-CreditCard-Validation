@@ -30,8 +30,8 @@ class CreditCardFactory
         end
       end
     when 13
-      if mastercard_range.include?(n[0..1])
-        cc = MasterCard.new(n)
+      if n[0,1] == '4'
+        cc = Visa.new(n)
       else
         cc = CreditCard.new(n)
       end
@@ -40,6 +40,6 @@ class CreditCardFactory
     end
   rescue StandardError => e
     $stderr.puts e
-    e
+    # puts e.message
   end
 end

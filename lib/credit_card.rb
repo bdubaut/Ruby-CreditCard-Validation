@@ -1,4 +1,4 @@
-require "string"
+require "./lib/string.rb"
 
 module CreditCardValidator
   class CreditCard
