@@ -21,6 +21,7 @@ gem install bundler
 ruby validator.rb <card-number>
 ```
 ## Examples:
+These card numbers
 ```
 4111111111111111
 4111111111111
@@ -30,6 +31,7 @@ ruby validator.rb <card-number>
 5105105105105100
 5105 1051 0510 5106
 9111111111111111
+toto
 ```
 
 gives the following output:
@@ -42,4 +44,5 @@ DISCOVER: 6011111111111117 : valid
 MASTERCARD: 5105105105105100 : valid
 MASTERCARD: 5105105105105106 : invalid
 UNKNOWN: 9111111111111111 : invalid
+Credit Card: 'toto': Bad format.
 ```
