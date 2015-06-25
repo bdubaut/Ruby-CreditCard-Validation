@@ -4,10 +4,11 @@ module CreditCardValidator
   class MasterCard < CreditCard
 
     def initialize n
+      number = n.to_s
       start = (51..65).map { |e| e.to_s }
       if start.include?(n[0..1])
-        if n.length == 16
-          self.number = n.to_s
+        if number.length == 16
+          self.number = number
           self.type = 'MasterCard'
           self
         else

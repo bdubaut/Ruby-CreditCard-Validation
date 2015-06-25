@@ -4,9 +4,10 @@ module CreditCardValidator
   class Discover < CreditCard
 
     def initialize n
-      if n.length == 16
-        if n[0..3] == '6011'
-          self.number = n.to_s
+      number = n.to_s
+      if number.length == 16
+        if number[0..3] == '6011'
+          self.number = number
           self.type = 'Discover'
           self
         else

@@ -7,7 +7,7 @@ module CreditCardValidator
       number = n.to_s
       if n.length == 15
         if number[0,2] == '34' || number[0,2] == '37'
-          self.number = number.to_s
+          self.number = number
           self.type = 'AMEX'
           self
         else
