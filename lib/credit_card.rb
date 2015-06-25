@@ -2,7 +2,7 @@ module CreditCardValidator
   class CreditCard
     attr_accessor :number, :type
     def initialize n
-      self.number = n
+      self.number = n.to_s
       self.type = 'Unknown'
       self
     end

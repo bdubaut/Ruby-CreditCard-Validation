@@ -6,7 +6,7 @@ module CreditCardValidator
     def initialize n
         if n[0,1] == '4'
           if ((n.length == 13) || n.length == 16)
-            self.number = n
+            self.number = n.to_s
             self.type = 'VISA'
             self
           else

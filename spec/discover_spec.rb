@@ -12,7 +12,10 @@ describe Discover, 'Discover Credit Card' do
       expect(c.type).to eq 'Discover'
     end
     it 'should raise an error if the number length is not 16' do
-
+      expect{Discover.new('1234')}.to raise_error StandardError
+    end
+    it 'should raise an error if the number does not start with 6011' do
+      expect{Discover.new('6031111111111117')}.to raise_error StandardError
     end
   end
 end
