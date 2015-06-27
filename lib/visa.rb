@@ -1,7 +1,5 @@
 module CreditCardValidator
-
   class Visa < CreditCard
-
     def initialize n
       number = n.to_s
         if number[0,1] == '4'
@@ -17,5 +15,4 @@ module CreditCardValidator
         end
     end
   end
-
 end

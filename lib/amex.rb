@@ -1,7 +1,6 @@
 module CreditCardValidator
 
   class Amex < CreditCard
-
     def initialize n
       number = n.to_s
       if n.length == 15
@@ -16,8 +15,6 @@ module CreditCardValidator
         raise StandardError, 'AMEX: Does not have the right size.'
       end
     end
-
-
   end
 
 end

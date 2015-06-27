@@ -1,7 +1,5 @@
 module CreditCardValidator
-
   class MasterCard < CreditCard
-
     def initialize n
       number = n.to_s
       start = (51..65).map { |e| e.to_s }
@@ -17,8 +15,5 @@ module CreditCardValidator
         raise StandardError, 'MasterCard: Does not start with the right values.'
       end
     end
-
-
   end
-
 end

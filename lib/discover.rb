@@ -1,7 +1,5 @@
 module CreditCardValidator
-
   class Discover < CreditCard
-
     def initialize n
       number = n.to_s
       if number.length == 16
@@ -17,5 +15,4 @@ module CreditCardValidator
       end
     end
   end
-
 end
